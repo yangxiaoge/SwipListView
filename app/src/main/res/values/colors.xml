@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 常用颜色值 -->
+    <color name="white40">#40FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+    <color name="lemonyellow">#FFFACD</color>
+    <color name="graywhite">#F5F5F5</color>
+    <color name="grayslate">#708090</color>
+    <color name="lightblue">#0083FF</color>
+
+    <color name="theme_color">#ea5a0e</color>
+
+    <color name="tab_txt_focus_color">#ed4233</color>
+    <color name="tab_txt_color">#999999</color>
+
+    <color name="border_color">#c1c1c1</color>
+
+    <!-- 项目公共颜色 命名以 main 开头-->
+    <color name="main_black_fcolor">#313131</color>
+    <color name="main_hint_fcolor">#707070</color>
+
+    <!-- 单一的 颜色值-->
+    <color name="logoin_get">#707070</color>
+    <color name="my_divider_color">#f0eff5</color>
+
+    <color name="cicle_gray">#dedede</color>
+
+
+    <color name="common_gray_bkg">#f0eff5</color>
+</resources>

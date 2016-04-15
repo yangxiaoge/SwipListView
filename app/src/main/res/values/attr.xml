@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XEditText">
+        <attr name="border_color" format="color" />
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SquareText">
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension"/>
+    </declare-styleable>
+
+
+
+    <attr name="title" format="string" />
+    <attr name="titlesize" format="integer" />
+    <attr name="titlecolor" format="color" />
+    <attr name="s_title" format="string" />
+    <attr name="subtitle_size" format="integer" />
+    <attr name="subtitlecolor" format="reference" />
+    <attr name="showback" format="boolean" />
+    <attr name="showmenu" format="boolean" />
+
+    <declare-styleable name="toolbarWidget">
+        <attr name="title" />
+        <attr name="titlesize" />
+        <attr name="titlecolor" />
+        <attr name="s_title" />
+        <attr name="subtitle_size" />
+        <attr name="subtitlecolor" />
+        <attr name="showback" />
+        <attr name="showmenu" />
+        <attr name="leftnav" format="reference"/>
+        <attr name="rightnav" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="cicleCharge">
+        <attr name="toptitle" format="string"></attr>
+        <attr name="bottomtitle" format="string"></attr>
+        <attr name="toptitlecolor" format="color"></attr>
+        <attr name="bottomtitlecolor" format="color"></attr>
+
+    </declare-styleable>
+
+</resources>
