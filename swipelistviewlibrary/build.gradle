@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release' //添加
 
 android {
     compileSdkVersion 23
@@ -24,11 +25,12 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
 }
 
-/*publish {
+// 添加
+publish {
     userOrg = 'yangxiaoge' //bintray.com用户名
     groupId = 'com.yjn' //jcenter上的路径
-    artifacts = 'SwipeListViewLibrary' //项目名称
+    artifactId = 'SwipeListViewLibrary' //项目名称
     publishVersion = '1.0.0' //版本号
     desc = 'hey, guays. This is my first repository. ' //描述，不重要
-    website = 'https://github.com/yangxiaoge/SwipeListView'//网站，不重要
-}*/
+    website = 'https://github.com/yangxiaoge/SwipListView'//网站，不重要
+}
