@@ -102,7 +102,7 @@ public class SwipeMenuListView extends ListView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        //在拦截处处理，在滑动设置了点击事件的地方也能swip，点击时又不能影响原来的点击事件
+        //In the interception of the process, the slide set click event place can swip, click on the time and can not affect the original click event
         int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
@@ -113,16 +113,16 @@ public class SwipeMenuListView extends ListView {
                 mTouchPosition = pointToPosition((int) ev.getX(), (int) ev.getY());
                 View view = getChildAt(mTouchPosition - getFirstVisiblePosition());
 
-                //只在空的时候赋值 以免每次触摸都赋值，会有多个open状态
+                //Assigned only when empty to avoid touching each are assigned, there will be multiple open state
                 if (view instanceof SwipeMenuLayout) {
-                    //如果有打开了 就拦截.
+                    //If you have turned on the interception.
                     if (mTouchView != null && mTouchView.isOpen() && !inRangeOfView(mTouchView.getMenuView(), ev)) {
                         return true;
                     }
                     mTouchView = (SwipeMenuLayout) view;
                     mTouchView.setSwipeDirection(mDirection);
                 }
-                //如果摸在另外个view
+                // If you touch a view in another
                 if (mTouchView != null && mTouchView.isOpen() && view != mTouchView) {
                     handled = true;
                 }
@@ -135,7 +135,7 @@ public class SwipeMenuListView extends ListView {
                 float dy = Math.abs((ev.getY() - mDownY));
                 float dx = Math.abs((ev.getX() - mDownX));
                 if (Math.abs(dy) > MAX_Y || Math.abs(dx) > MAX_X) {
-                    //每次拦截的down都把触摸状态设置成了TOUCH_STATE_NONE 只有返回true才会走onTouchEvent 所以写在这里就够了
+                    //Each blocking state set to touch down TOUCH_STATE_NONE regarded only return true only go so onTouchEvent write here enough
                     if (mTouchState == TOUCH_STATE_NONE) {
                         if (Math.abs(dy) > MAX_Y) {
                             mTouchState = TOUCH_STATE_Y;
@@ -197,10 +197,10 @@ public class SwipeMenuListView extends ListView {
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                //有些可能有header,要减去header再判断
+                // Some may have a header, minus the header again to judge
                 mTouchPosition = pointToPosition((int) ev.getX(), (int) ev.getY()) - getHeaderViewsCount();
-                //如果滑动了一下没完全展现，就收回去，这时候mTouchView已经赋值，再滑动另外一个不可以swip的view
-                //会导致mTouchView swip 。 所以要用位置判断是否滑动的是一个view
+                //If you slide a bit did not fully demonstrated, we go back, this time mTouchView been assigned, and then slide the other not swip of view
+                //It will lead mTouchView swip. So use the position to determine whether the slide is a view
                 if (!mTouchView.getSwipEnable() || mTouchPosition != mTouchView.getPosition()) {
                     break;
                 }
@@ -226,7 +226,7 @@ public class SwipeMenuListView extends ListView {
                 }
                 break;
             //		add by liutong start
-            //		当 listview 处于 有 父 view 的 时候 滑动 有时候 会 触发 cancel 事件
+            //		When Father listview in view when the slide sometimes trigger cancel event
             case MotionEvent.ACTION_CANCEL:
                 if (mTouchState == TOUCH_STATE_X) {
                     if (mTouchView != null) {
@@ -349,7 +349,7 @@ public class SwipeMenuListView extends ListView {
     }
 
     /**
-     * 判断点击事件是否在某个view内
+     * Click determine whether the event in a view inside
      *
      * @param view
      * @param ev

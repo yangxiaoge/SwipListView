@@ -186,7 +186,6 @@ public class SwipeMenuLayout extends FrameLayout {
 			swipe(dis);
 			break;
 			//		add by liutong start
-			//		当 listview 处于 有 父 view 的 时候 滑动 有时候 会 触发 cancel 事件
 			case MotionEvent.ACTION_CANCEL:
 				if ((isFling || Math.abs(mDownX - event.getX()) > (mMenuView.getWidth() / 4)) &&
 						Math.signum(mDownX - event.getX()) == mSwipeDirection) {
