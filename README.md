@@ -1,5 +1,5 @@
 # SwipListView
-SwipeListViewLibrary库 是listview带侧滑的组件库
+SwipeListViewLibrary was a listview slide widget
 
 compile：
 ```
